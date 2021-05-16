@@ -117,15 +117,20 @@ ENDPOINT='GET/'
 - The route “<audioFileType>” will return all the audio files of that type
 Example:
     Audio file type can be one of the following:
-        1 – song
-        2 – podcast
-        3 – audiobook
+1. song
+2. podcast
+3. audiobook
     To get list of all podcasts use URL : http://127.0.0.1:8000/testapp/GET/podcast/
+    
     To get detailed view of podcast use URL : http://127.0.0.1:8000/testapp/GET/podcast/2
+    
     Note: `No need to pass json data integer is supported.`
+    
     Same goes for other filetypes.
+    
     Output:
     http://127.0.0.1:8000/testapp/GET/podcast/
+    
     
 ```json
     [
