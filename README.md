@@ -67,3 +67,109 @@ The response of these methods should be one of the following:
 
 Check on http://127.0.0.1:8000/admin/ for admin privileges
 ## Use Of Endpoints:
+Objects:
+
+-song
+```json
+{
+    "id": 2,
+    "audioFileType": "song",
+    "NameOfTheSong": "Uptown Funk",
+    "DurationInNoOfSeconds": 65,
+    "UploadedTime": "2021-05-16T15:32:01.772000Z"
+}
+```
+audiobook
+```json
+{
+    "id": 2,
+    "audioFileType": "audiobook",
+    "TitleOfTheAudiobook": "Hacking planet needs to know11",
+    "AutherOfTheTitle": "Sahil Panindre",
+    "Narrator": "sahil",
+    "DurationInNoOfSeconds": 10,
+    "UploadedTime": "2021-05-16T00:00:00.431000Z"
+}
+```
+podcast
+```json
+{
+    "id": 2,
+    "audioFileType": "podcast",
+    "NameOfThePodcast": "life talk",
+    "DurationInNoOfSeconds": 200,
+    "UploadedTime": "2021-05-15T23:02:54.069000Z",
+    "Host": "sandeep maheshwari",
+    "participents": "sahil1,sahi2,sahil3,sahil4,sahil5,sahil6,sahil7,sahil8,sahil9,sahil10"
+}
+```
+
+
+### GET:
+BASE_URL='http://127.0.0.1:8000/testapp/'
+ENDPOINT='GET/'
+- The route “<audioFileType>/<audioFileID>” will return the specific audio file
+- The route “<audioFileType>” will return all the audio files of that type
+Example:
+    Audio file type can be one of the following:
+        1 – song
+        2 – podcast
+        3 – audiobook
+    To get list of all podcasts use URL : http://127.0.0.1:8000/testapp/GET/podcast/
+    To get detailed view of podcast use URL : http://127.0.0.1:8000/testapp/GET/podcast/2
+    Note: `No need to pass json data integer is supported.`
+    Same goes for other filetypes.
+    Output:
+    http://127.0.0.1:8000/testapp/GET/podcast/
+    
+```json
+    [
+    {
+        "id": 1,
+        "audioFileType": "podcast",
+        "NameOfThePodcast": "Mann ki baat",
+        "DurationInNoOfSeconds": 650,
+        "UploadedTime": "2021-05-15T23:00:31.751000Z",
+        "Host": "PM Modi",
+        "participents": "sahil,viren,aditya"
+    },
+    {
+        "id": 2,
+        "audioFileType": "podcast",
+        "NameOfThePodcast": "life talk",
+        "DurationInNoOfSeconds": 200,
+        "UploadedTime": "2021-05-15T23:02:54.069000Z",
+        "Host": "sandeep maheshwari",
+        "participents": "sahil1,sahi2,sahil3,sahil4,sahil5,sahil6,sahil7,sahil8,sahil9,sahil10"
+    },
+    {
+        "id": 4,
+        "audioFileType": "podcast",
+        "NameOfThePodcast": "to the moon",
+        "DurationInNoOfSeconds": 630,
+        "UploadedTime": "2021-05-16T00:06:00.125000Z",
+        "Host": "elon musk",
+        "participents": ""
+    }
+]
+
+```
+    
+with http://127.0.0.1:8000/testapp/GET/podcast/2
+
+```json
+    HTTP 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+{
+    "id": 2,
+    "audioFileType": "podcast",
+    "NameOfThePodcast": "life talk",
+    "DurationInNoOfSeconds": 200,
+    "UploadedTime": "2021-05-15T23:02:54.069000Z",
+    "Host": "sandeep maheshwari",
+    "participents": "sahil1,sahi2,sahil3,sahil4,sahil5,sahil6,sahil7,sahil8,sahil9,sahil10"
+}
+```
+        
