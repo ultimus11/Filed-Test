@@ -174,19 +174,31 @@ Vary: Accept
 ```
 
 ### CREATE
+
 BASE_URL='http://127.0.0.1:8000/testapp/'
+
 ENDPOINT='CREATE/'
+
 The request will have objects releted to filetypes (Already mentioned)
+
 
 ### UPDATE
 BASE_URL='http://127.0.0.1:8000/testapp/'
+
 ENDPOINT='UPDATE/'
+
 The request will have objects releted to filetypes (Already mentioned)
+
 - The route be in the following format: 
    “<audioFileType>/<audioFileID>”
+
+
 ### DELETE
 BASE_URL='http://127.0.0.1:8000/testapp/'
+
 ENDPOINT='DELETE/'
+
 - The route will be in the following format: 
     “<audioFileType>/<audioFileID>”
+
 
