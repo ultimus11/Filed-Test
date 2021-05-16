@@ -45,3 +45,25 @@ The response of these methods should be one of the following:
 ## Technologies Used/Implemented
 - Django Web API
 - MongoDB
+# How to Use:
+### Requirements:
+- Python 3.6.5 (Others versions will also work I tested it on 3.6.5)
+- Django: pip install Django
+- djongo: pip install djongo
+- django rest framework: pip install djangorestframework
+- MongoDB (Compass optional)
+- Will power & dedication to solve the erors (optional: because its easy)
+### Initial Steps
+- clone this repo
+- open cmd/terminal in filedTest directory
+- open mongoDB compass and connect
+- create database named `filedDb`
+- run in terminal `py manage.py makemigrations`
+- run in terminal `py manage.py migrate`
+- run in terminal `py manage.py createsuperuser`
+- give required credentials & set strong password for superuser
+- run in terminal `py manage.py runserver`
+- Access browsable api via localhost
+
+Check on http://127.0.0.1:8000/admin/ for admin privileges
+## Use Of Endpoints:
