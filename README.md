@@ -113,8 +113,8 @@ podcast
 ### GET:
 BASE_URL='http://127.0.0.1:8000/testapp/'
 ENDPOINT='GET/'
-- The route “<audioFileType>/<audioFileID>” will return the specific audio file
-- The route “<audioFileType>” will return all the audio files of that type
+- The route `<audioFileType>/<audioFileID>` will return the specific audio file
+- The route `<audioFileType>` will return all the audio files of that type
 Example:
     Audio file type can be one of the following:
 1. song
