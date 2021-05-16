@@ -125,7 +125,7 @@ Example:
     
     To get detailed view of podcast use URL : http://127.0.0.1:8000/testapp/GET/podcast/2
     
-    Note: `No need to pass json data integer is supported.`
+    Note: `No need to pass json data, integer is supported.`
     
     Same goes for other filetypes.
     
