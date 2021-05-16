@@ -5,8 +5,11 @@ Coding Exercise: Write a Flask / FastAPI / Django Web API that simulates the beh
 ## Starting With Models
 > ParticipantField(models.Field)
 
+```
 Created Custom Model Field satisfying Podcast Participants requirement.
 As recommended for podcasts there needs a list field which accepts 10 elements where each element has max size 100.
+```
+
 ##### Use in model:
 > participents = ParticipantField()
 
@@ -64,6 +67,8 @@ The response of these methods should be one of the following:
 - give required credentials & set strong password for superuser
 - run in terminal `py manage.py runserver`
 - Access browsable api via localhost
+- Test api via python requests or Postman
+
 
 Check on http://127.0.0.1:8000/admin/ for admin privileges
 ## Use Of Endpoints:
@@ -189,8 +194,7 @@ ENDPOINT='UPDATE/'
 
 The request will have objects releted to filetypes (Already mentioned)
 
-- The route be in the following format: 
-   “<audioFileType>/<audioFileID>”
+- The route be in the format: `<audioFileType>/<audioFileID>`
 
 
 ### DELETE
@@ -198,7 +202,6 @@ BASE_URL='http://127.0.0.1:8000/testapp/'
 
 ENDPOINT='DELETE/'
 
-- The route will be in the following format: 
-    “<audioFileType>/<audioFileID>”
+- The route will be in the format: `<audioFileType>/<audioFileID>`
 
 
